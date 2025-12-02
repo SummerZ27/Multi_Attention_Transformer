@@ -1,0 +1,31 @@
+/home/zeus/miniconda3/etc/profile.d/conda.sh: line 48: syntax error near unexpected token `('
+/home/zeus/miniconda3/etc/profile.d/conda.sh: line 48: `conda() {'
+Using device: cpu
+
+================================================================================
+TRANSFORMER COMPARISON EXPERIMENT
+================================================================================
+
+Comparing:
+  1. Naive Transformer (window=30, attention=30x30) - 100 epochs
+  2. Naive Transformer (window=90, attention=90x90) - 100 epochs
+  3. PTA Transformer (window=90, attention=32x32) - 100 epochs
+  4. PatchTST (window=90 or 96) - 100 epochs
+  5. PTA_2 Transformer (window=90, outputs compressed 32 tokens) - 100 epochs
+
+On datasets:
+  - Apple Stock (AAPL)
+  - S&P 500
+
+================================================================================
+Running experiment for Apple Stock (AAPL)
+================================================================================
+Loaded Apple Stock (AAPL) (symbol: AAPL), 11323 rows
+
+[1/5] Training Naive Transformer (window=30, attention=30x30)...
+✓ Verified Naive-30: Attention size = 30×30
+Naive-30 Epoch 001 | Train MSE 8.6059e-02 | Test RMSE (orig) 1.5864e+01
+Naive-30 Epoch 010 | Train MSE 8.3559e-04 | Test RMSE (orig) 1.3288e+01
+Naive-30 Epoch 020 | Train MSE 9.1324e-04 | Test RMSE (orig) 1.8780e+01
+Naive-30 Epoch 030 | Train MSE 1.9181e-03 | Test RMSE (orig) 1.4609e+01
+Naive-30 Epoch 040 | Train MSE 7.1895e-04 | Test RMSE (orig) 1.2608e+01
